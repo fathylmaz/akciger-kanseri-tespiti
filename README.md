@@ -25,11 +25,11 @@ Projenin orijinal eğitilmiş CNN modeli
 - Model formatı: Keras H5
 - Dosya boyutu: 127,9 MiB
 
-Model dosyası GitHub Releases bölümünde
-v1.0.0 sürümüyle paylaşılmak üzere hazırlanmıştır.
+Model dosyası **[GitHub Releases — v1.0.0](https://github.com/fathylmaz/akciger-kanseri-tespiti/releases/tag/v1.0.0)** üzerinden yayımlanmıştır.
 
-Release yayımlandıktan sonra modeli indirip
-`app.py` dosyasıyla aynı klasöre yerleştirin.
+[**Eğitilmiş modeli indir (`akcigerkansermodel.h5`)**](https://github.com/fathylmaz/akciger-kanseri-tespiti/releases/download/v1.0.0/akcigerkansermodel.h5)
+
+İndirilen modeli `app.py` dosyasıyla aynı klasöre yerleştirin.
 
 Model TensorFlow 2.21.0 ile başarıyla yüklenmiş
 ve üç örnek görüntü üzerinde Flask arayüzünden
@@ -40,7 +40,7 @@ Klinik tanı için doğrulanmamıştır.
 
 ## Başlatma (Windows, PowerShell)
 
-1. Orijinal ZIP dosyanızdan `akcigerkansermodel.h5` dosyasını `app.py` ile aynı klasöre kopyalayın.
+1. [GitHub Releases v1.0.0](https://github.com/fathylmaz/akciger-kanseri-tespiti/releases/tag/v1.0.0) sayfasından `akcigerkansermodel.h5` dosyasını indirerek `app.py` ile aynı klasöre yerleştirin.
 2. Terminali proje klasöründe açın, uygun Python sürümüyle sanal ortam oluşturun:
 
 ```powershell
@@ -106,7 +106,7 @@ ayrımı doğrulanmamıştır.
 - [x] Sunumdaki metriklerin bağımsız olarak yeniden doğrulanmadığı ve hasta düzeyinde veri ayrımının doğrulanamadığı açıklandı.
 - [x] Büyük veri seti Git deposuna eklenmedi; veri setinin resmî kaynak bağlantısı verildi.
 - [x] Eğitilmiş modelin SHA-256 değeri doğrulandı ve `v1.0.0` GitHub Release taslağına yüklendi.
-- [ ] `v1.0.0` Release yayımlandı ve modelin indirme bağlantısı test edildi.
+- [x] `v1.0.0` Release yayımlandı ve modelin indirme bağlantısı kullanıcı tarafından test edildi.
 - [x] Depodaki iki örnek PNG'de görünür doğrudan kimlik bilgileri ve metin/EXIF meta verisi için temel kontrol yapıldı; veri setinin kaynak sayfasındaki CC BY 4.0 lisansı incelendi. Bu, kapsamlı kimliksizleştirme veya dosya kökeni doğrulaması değildir.
 
 *Not:* Kontrol listesindeki tamamlanan maddeler teknik/operasyonel kontrolleri ifade eder; klinik geçerlilik veya kapsamlı veri güvenliği denetimi anlamına gelmez.

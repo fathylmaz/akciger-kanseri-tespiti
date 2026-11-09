@@ -9,9 +9,34 @@ Bu depo, **üniversitede ekip olarak geliştirilip sunulmuş orijinal projenin**
 - `app.py`: Flask tahmin sunucusu
 - `templates/index.html`: Üniversite projesindeki **değiştirilmemiş** arayüz
 - `static/`: Üniversite projesindeki iki örnek görüntü
-- `AkciğerKanserTeshisi (1).pdf`: Üniversite **orijinal sunumu, değiştirilmeden**
+- `AkciğerKanserTeshisi (1).pdf`: Üniversite sunumu; proje ekibi bilgileri düzeltilmiş, teknik içerik korunmuştur.
 - `data/`: büyük veri klasörü için yerel alan; içerik otomatik olarak Git'e eklenmez
 - `MODEL_DOSYALARI.md`: iki orijinal model dosyasının ayırt edici özetleri
+
+## Eğitilmiş CNN Modeli
+
+Projenin orijinal eğitilmiş CNN modeli
+`akcigerkansermodel.h5` dosyasıdır.
+
+- Model türü: Convolutional Neural Network (CNN)
+- Giriş boyutu: 224 × 224 × 3
+- Çıkış sınıfları: Normal, Benign, Malignant
+- Toplam parametre: 11.169.347
+- Model formatı: Keras H5
+- Dosya boyutu: 127,9 MiB
+
+Model dosyası GitHub Releases bölümünde
+v1.0.0 sürümüyle paylaşılmak üzere hazırlanmıştır.
+
+Release yayımlandıktan sonra modeli indirip
+`app.py` dosyasıyla aynı klasöre yerleştirin.
+
+Model TensorFlow 2.21.0 ile başarıyla yüklenmiş
+ve üç örnek görüntü üzerinde Flask arayüzünden
+tahmin ürettiği doğrulanmıştır.
+
+Model yalnızca akademik ve eğitim amaçlıdır.
+Klinik tanı için doğrulanmamıştır.
 
 ## Başlatma (Windows, PowerShell)
 

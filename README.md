@@ -97,13 +97,19 @@ ayrımı doğrulanmamıştır.
 
 Üniversite sunumunda CNN sınıflandırma performansı bildirilmiştir. Bu sonuçlar **eski deney sonuçlarıdır**; burada yeniden eğitim veya bağımsız test yapılmadı. Sunumdaki doğruluk sayıları arasında farklılıklar görüldüğü ve hasta bazında test ayrımı doğrulanamadığı için klinik performans iddiasında bulunulmamalıdır. Bu araç **tıbbi tanı amacıyla kullanılamaz**.
 
-## Paylaşmadan önce
+## Yayın ve doğrulama kontrol listesi
 
-- [ ] Ekipteki katkı sahipleri ve sunumun yayımlanması için mutabakat
-- [ ] Veri setinin kaynağı, izinleri, lisansı ve kimliksizliği doğrulandı
-- [x] Model yükleme ve örnek tahmin yerelde test edildi
-- [ ] Eski sunumdaki metriklerin kaynağı ve sınırlılıkları açıkça belirtildi
-- [ ] Büyük model/veri dosyaları için yayımlama yolu belirlendi
+- [x] Fatih Yılmaz ve Gamze Özateş'in ortak proje ve sunum paylaşımı için mutabakatı alındı.
+- [x] Veri setinin kaynağı, DOI bilgisi ve kaynakta belirtilen lisansı README'ye eklendi.
+- [x] Yerel arşivdeki 1.097 JPG görüntüsü ve üç sınıfın dosya sayıları kontrol edildi.
+- [x] Orijinal CNN modeli TensorFlow 2.21.0 ile yüklendi; Flask arayüzünde üç örnek tahmin test edildi.
+- [x] Sunumdaki metriklerin bağımsız olarak yeniden doğrulanmadığı ve hasta düzeyinde veri ayrımının doğrulanamadığı açıklandı.
+- [x] Büyük veri seti Git deposuna eklenmedi; veri setinin resmî kaynak bağlantısı verildi.
+- [x] Eğitilmiş modelin SHA-256 değeri doğrulandı ve `v1.0.0` GitHub Release taslağına yüklendi.
+- [ ] `v1.0.0` Release yayımlandı ve modelin indirme bağlantısı test edildi.
+- [ ] Depoda paylaşılan iki örnek görüntünün kimliksizleştirme ve paylaşım koşulları ayrıca doğrulandı.
+
+*Not:* Kontrol listesindeki tamamlanan maddeler teknik/operasyonel kontrolleri ifade eder; klinik geçerlilik veya kapsamlı veri güvenliği denetimi anlamına gelmez.
 
 ## Proje Ekibi
 

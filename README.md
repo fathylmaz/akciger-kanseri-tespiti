@@ -107,7 +107,7 @@ ayrımı doğrulanmamıştır.
 - [x] Büyük veri seti Git deposuna eklenmedi; veri setinin resmî kaynak bağlantısı verildi.
 - [x] Eğitilmiş modelin SHA-256 değeri doğrulandı ve `v1.0.0` GitHub Release taslağına yüklendi.
 - [ ] `v1.0.0` Release yayımlandı ve modelin indirme bağlantısı test edildi.
-- [ ] Depoda paylaşılan iki örnek görüntünün kimliksizleştirme ve paylaşım koşulları ayrıca doğrulandı.
+- [x] Depodaki iki örnek PNG'de görünür doğrudan kimlik bilgileri ve metin/EXIF meta verisi için temel kontrol yapıldı; veri setinin kaynak sayfasındaki CC BY 4.0 lisansı incelendi. Bu, kapsamlı kimliksizleştirme veya dosya kökeni doğrulaması değildir.
 
 *Not:* Kontrol listesindeki tamamlanan maddeler teknik/operasyonel kontrolleri ifade eder; klinik geçerlilik veya kapsamlı veri güvenliği denetimi anlamına gelmez.
 

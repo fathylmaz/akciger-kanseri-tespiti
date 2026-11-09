@@ -1,0 +1,19 @@
+# Kurulum çıktıları
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+
+# Büyük ve/veya lisans gerektiren dosyalar
+*.h5
+*.keras
+*.ckpt
+# Veri kümesi yerelde tutulur; paylaşım hakkı doğrulanırsa Git LFS veya resmi veri kaynağı kullanılır.
+data/*
+!data/README.md
+
+# Yerel raporlar
+reports/
+.DS_Store

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akciğer Kanseri Tespiti</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        width: 350px;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input[type="file"] {
+        margin: 20px 0;
+      }
+
+      button {
+        background: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      button:hover {
+        background: #45a049;
+      }
+
+      #preview {
+        margin: 15px auto;
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 8px;
+        object-fit: contain;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      #correct-answer {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .correct {
+        color: green;
+      }
+
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Akciğer Kanseri Tespiti</h1>
+      <form id="upload-form">
+        <input type="file" name="file" accept="image/*" required />
+        <br />
+        <button type="submit">Tahmin Et</button>
+      </form>
+
+      <img
+        id="preview"
+        src="#"
+        alt="Seçilen resim önizlemesi"
+        style="display: none"
+      />
+
+      <div id="result"></div>
+      <div id="correct-answer"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById("upload-form");
+      const resultDiv = document.getElementById("result");
+      const previewImg = document.getElementById("preview");
+      const correctAnswerDiv = document.getElementById("correct-answer");
+
+      form.file.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          previewImg.src = URL.createObjectURL(file);
+          previewImg.style.display = "block";
+          resultDiv.textContent = "";
+          correctAnswerDiv.textContent = "";
+          correctAnswerDiv.className = "";
+        }
+      };
+
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        resultDiv.textContent = "Tahmin yapılıyor...";
+        correctAnswerDiv.textContent = "";
+        correctAnswerDiv.className = "";
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/predict", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await response.json();
+
+          if (data.error) {
+            resultDiv.textContent = "Hata: " + data.error;
+            return;
+          }
+
+          resultDiv.textContent = "Modelin tahmini: " + data.prediction;
+        } catch (error) {
+          resultDiv.textContent = "Tahmin isteği gönderilirken hata oluştu.";
+        }
+      };
+    </script>
+  </body>
+</html>

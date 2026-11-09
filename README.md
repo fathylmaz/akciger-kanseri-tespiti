@@ -39,6 +39,35 @@ python scripts/veri_ozeti.py
 
 Kullanılan veri setinin lisans/atıf ve kişisel veri şartlarını kontrol etmeden tüm görüntüleri herkese açık GitHub deposuna yüklemeyin. Tam veri gerekli ama büyükse resmî veri kaynağına link verilebilir; haklar elveriyorsa Git LFS de değerlendirilebilir.
 
+### Kullanılan Veri Seti
+
+Proje kapsamında IQ-OTH/NCCD Lung Cancer Dataset
+kullanılmıştır.
+
+Kaynak: https://data.mendeley.com/datasets/bhmdr45bh2/4
+
+Veri seti DOI: 10.17632/bhmdr45bh2.4
+
+Lisans: Creative Commons Attribution 4.0 (CC BY 4.0)
+
+Projede kullanılan görüntülerin dağılımı:
+
+| Sınıf | Görüntü Sayısı |
+|---|---:|
+| Normal | 416 |
+| Benign | 120 |
+| Malignant | 561 |
+| **Toplam** | **1097** |
+
+Veri seti orijinal klasör isimleri korunarak
+kullanılmıştır. Büyük görüntü dosyaları GitHub
+deposuna eklenmemiştir. Veri setine orijinal
+kaynağından erişilebilir.
+
+Bu sayılar yerel arşivdeki görüntü sayımlarına
+dayanmaktadır. Hasta bazında bağımsız test
+ayrımı doğrulanmamıştır.
+
 ## Akademik sonuç ve sınırlar
 
 Üniversite sunumunda CNN sınıflandırma performansı bildirilmiştir. Bu sonuçlar **eski deney sonuçlarıdır**; burada yeniden eğitim veya bağımsız test yapılmadı. Sunumdaki doğruluk sayıları arasında farklılıklar görüldüğü ve hasta bazında test ayrımı doğrulanamadığı için klinik performans iddiasında bulunulmamalıdır. Bu araç **tıbbi tanı amacıyla kullanılamaz**.
